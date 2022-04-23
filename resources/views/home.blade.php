@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
- <div class="container head-block">
-    <div class="bg-body w-25 h-100 rounded-3 shadow-lg">
+ <div class="container head-block d-flex">
+    <div class="bg-body h-100 rounded-3 shadow-lg news-block flex-shrink-0" >
         <div class="d-flex px-3">
             <h5 class="py-3 px-1 m-0">Горячие новинки!</h5>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" fill="red" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 611.999 611.999" style="enable-background:new 0 0 611.999 611.999;" xml:space="preserve">
@@ -22,6 +22,10 @@
             <x-news-title>Свежее поступление видеокарт 20 серии</x-news-title>
             <x-news-title>Открытие сайта! Успей забрать подарочный промо-код!</x-news-title>        
         </div>
+    </div>
+
+    <div class="bg-body h-100 rounded-3 shadow-lg w-75 mx-3">
+        <x-slider></x-slider>
     </div>
  </div>
 @endsection

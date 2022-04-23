@@ -6,7 +6,24 @@
     transition: 300ms;
     color: black;
 }
-.news-title:hover{
-    color: #ffc107;
-    fill: #ffc107;
+
+.news-line{
+    height: 3px;
+    width: 0%;
+    background-color: rgb(108, 0, 129);
+    transition: 300ms;
 }
+
+.news-title:hover{
+    color: rgb(108, 0, 129);
+    fill: rgb(108, 0, 129);
+}
+
+.news-title:hover .news-line{
+    width: 100%;
+}
+
+.news-block{
+    width: 330px;
+}
+
