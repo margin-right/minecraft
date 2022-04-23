@@ -10,8 +10,8 @@
       </ul>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-warning me-2">Вход</button>
-        <button type="button" class="btn btn-warning">Регистрация</button>
+        <button type="button" class="btn btn-outline-warning me-2 mt-1">Вход</button>
+        <button type="button" class="btn btn-warning mt-1">Регистрация</button>
       </div>
     </div>
 </header>
