@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.scripts(['node_modules/bootstrap/dist/js/bootstrap.js'], 'public/js/bootstrap.js')
+mix.scripts(['node_modules/@popperjs/core/dist/umd/popper.min.js','node_modules/bootstrap/dist/js/bootstrap.js'], 'public/js/bootstrap.js')
     .sass('node_modules/bootstrap/scss/bootstrap.scss', 'public/css')
     .sass('node_modules/bootstrap-icons/font/bootstrap-icons.scss', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [

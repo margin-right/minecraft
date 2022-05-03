@@ -20,6 +20,15 @@
     </style>
 </head>
 <body>
+    @if ($alert = session()->pull('alert'))
+        <x-alert type="{{session()->pull('alert_type')}}" :message="$alert"/>
+    @endif
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <x-alert type="danger" :message="$error"/>
+        @endforeach
+    @endif
+    
     <x-navbar/>
     @yield('content')
     @yield('scripts')
