@@ -28,4 +28,5 @@
         <x-slider></x-slider>
     </div>
  </div>
+ 
 @endsection

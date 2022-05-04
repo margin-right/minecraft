@@ -23,3 +23,6 @@ Route::get('/login', 'App\Http\Controllers\PagesController@login')->name('login'
 Route::post('/login', 'App\Http\Controllers\AuthController@Login');
 
 Route::get('/logout', 'App\Http\Controllers\AuthController@Logout')->name('logout');
+
+Route::get('/catalog', 'App\Http\Controllers\PagesController@catalog')->name('catalog');
+Route::get('/catalog/{id}', 'App\Http\Controllers\CatalogController@catalog');
