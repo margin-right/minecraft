@@ -4,9 +4,8 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="/catalog" class="nav-link px-2 text-white">Каталог</a></li>
-        <li><a href="/constructor" class="nav-link px-2 text-white">Конструктор</a></li>
-        <li><a href="/contacts" class="nav-link px-2 text-white">Контакты</a></li>
-        <li><a href="/about" class="nav-link px-2 text-white">О нас</a></li>
+        <li><a href="/#contacts" class="nav-link px-2 text-white">Контакты</a></li>
+        <li><a href="/#about" class="nav-link px-2 text-white">О компании</a></li>
       </ul>
 
       
@@ -16,8 +15,11 @@
             <img src={{Storage::url(session('avatar'))}} alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-            <li><a class="dropdown-item" href="#">Корзина</a></li>
-            <li><a class="dropdown-item" href="#">Заказы</a></li>
+            @if (session('role') == '1')
+            <li><a class="dropdown-item" href="/admin">Админ панель</a></li>
+            @endif
+            <li><a class="dropdown-item" href="/cart">Корзина</a></li>
+            <li><a class="dropdown-item" href="/orders">Заказы</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/logout">Выйти</a></li>
           </ul>

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    public static function id($name){
+        return static::where('name', $name)->get('id')->toArray()[0]['id'];
+    }
+
 }

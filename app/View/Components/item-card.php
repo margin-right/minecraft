@@ -9,6 +9,7 @@ class item-card extends Component
 
     public $img;
     public $cost;
+    public $id;
     /**
      * Create a new component instance.
      *
@@ -16,6 +17,7 @@ class item-card extends Component
      */
     public function __construct($img, $cost)
     {
+        $this->id = $id;
         $this->img = $img;
         $this->cost = $cost;
     }

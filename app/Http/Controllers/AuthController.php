@@ -10,7 +10,6 @@ class AuthController extends Controller
 {
     public function AddUser(Request $request){
 
-
         /* валидация полей */
 
         $validated = $request->validate([
@@ -48,10 +47,11 @@ class AuthController extends Controller
             
             $db_password = User::where('email', $email)->first('password')->toArray()['password'];
             $avatar = User::where('email', $email)->first('avatar')->toArray()['avatar'];
+            $role = User::where('email', $email)->first('role_id')->toArray()['role_id'];
             if(password_verify($password, $db_password)){
 
                 session()->regenerate();
-                session(['email' => $email, 'password' => $password, 'avatar' => $avatar]);
+                session(['email' => $email, 'password' => $db_password, 'avatar' => $avatar, 'role' => $role]);
 
                 return true;
             }else{

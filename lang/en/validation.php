@@ -158,9 +158,13 @@ return [
     */
 
     'attributes' => [
-        'password' => 'пароль',
-        'password-repeat' => 'повторение пароля',
-        'avatar' => 'аватар',
+        'cost' => 'Цена',
+        'img' => 'Фото',
+        'description' => 'Описание',
+        'name' => 'Название',
+        'password' => 'Пароль',
+        'password-repeat' => 'Повторение пароля',
+        'avatar' => 'Аватар',
 
     ],
 
